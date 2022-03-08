@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vanilla-zoom.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allan&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arizonia&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calligraffitti&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Charm&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-dark clean-navbar" style="box-shadow: 0px 0px var(--bs-red);background: var(--bs-yellow);">
+        <div class="container"><a class="navbar-brand logo" href="#" style="color: var(--bs-light);">Aural Mate</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/" style="color: var(--bs-light);">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/convert" style="color: var(--bs-light);">Convert</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about-us" style="color: var(--bs-light);">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact-us" style="color: var(--bs-light);">Contact Us</a></li>
+                </ul><button class="btn btn-primary" type="button">Log In / Sign up</button>
+            </div>
+        </div>
+    </nav>
+    <main class="text-dark page landing-page"><section id="about" class="home-section color-dark bg-white">
+  <div class="container marginbot-50">
+    <div class="row">
+      <div class="col-md-12">
+        <ol id="wo-breadcrumbs" class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/" itemprop="item">
+              <span itemprop="name">
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+            <span class='separator'>
+            </span>
+          </li>
+          <li>
+            <span>
+            </span>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="row">
+      <div class="">
+        <div id="page-wrapper">
+          <div class="col-md-8">
+            <form name="imagetotext" method="post" class="image-form form-horizontal" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 class="home-header">Image to plain text to speech reader speaks your picture.
+                  </h1>
+                  <p>* Please upload an image (JPG/JPEG, PNG) or a document (PDF / docx,doc,odt) and select the language in the image. Aural Mate will convert it to text then you can have it speaking.
+                  </p>
+                  <br>
+                  <br>
+                </div>
+              </div>
+              <div class="row option">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="imagetotext_image" class="control-label col-sm-3 required">
+                      Image File
+                     
+                      <span class="asterisk">*
+                      </span>
+                           <br>
+                         <br>
+                    </label>
+                </div>
+                <div class="row option">
+                  <div class="col-md-12">
+                  </div>
+                </div>
+                <div class="row option">
+                  <div class="col-md-12">
+                    <form
+                      action="/upload"
+                      method="POST"
+                      enctype="multipart/form-data">
+                      <input type="file" id="my_file" name="filename"/>
+                      <input type="submit" value="Upload"/>
+                    </form>
+                  </div>
+                </div>
+
+        <section class="clean-block about-us"></section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sign up</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help desk</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2021 Copyright Text</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="{{ url_for('static', filename='/js/vanilla-zoom.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/theme.js') }}"></script>
+</body>
+
+</html>
