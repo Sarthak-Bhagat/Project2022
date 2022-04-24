@@ -1,4 +1,5 @@
 import pytesseract
+from pathlib import Path
 from PIL import Image
 import cv2
 import time
@@ -11,14 +12,16 @@ from pdf2image import convert_from_path
 engine = pyttsx3.init()
 
 
-def ocr(f, high_qual):
+def ocr(f):
     print(f.filename)
-    high_qual = False
-    filename = f"uploads/{f.filename}"
-    ext = f.filename.split(".")[-1]
+    filename = os.path.join(f"uploads/{f.filename}")
+    fname = Path(f.filename).stem
+    ext = Path(f.filename).suffix
+    print(fname, ext)
+
     output = "Something went wrong"
 
-    if ext in ["png", "jpg", "jpeg"]:
+    if ext in [".png", ".jpg", ".jpeg"]:
         image = cv2.imread(filename)
         gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         threshold_img = cv2.threshold(
@@ -27,7 +30,7 @@ def ocr(f, high_qual):
         custom_config = r"--oem 3 --psm 6"
         output = pytesseract.image_to_string(threshold_img, config=custom_config)
 
-    elif ext in ["docx", "doc"]:
+    elif ext in [".docx", ".doc"]:
         doc = docx.Document(f)
         output = ""
         fullText = []
@@ -35,7 +38,7 @@ def ocr(f, high_qual):
             fullText.append(para.text)
             output = "\n".join(fullText)
 
-    elif ext == "pdf":
+    elif ext == ".pdf":
 
         doc = convert_from_path(f"uploads/{f.filename}")
         output = ""
@@ -43,16 +46,20 @@ def ocr(f, high_qual):
         for _, page_data in enumerate(doc):
             output += "\n" + pytesseract.image_to_string(page_data)
 
-        # high_qual = False
-
     print(output)
+
+    return output
+
+
+def audioify(output):
     print("Converting to audio")
+    high_qual = False
     if high_qual == True:
         tts = gTTS(text=output, lang="en")
         tts.save("output.mp3")
     else:
         engine.setProperty("voice", "english")
-        fname = f"/home/dez/Downloads/Project/Main/conversions/{(f.filename).split('.')[0]}.mp3"
+        fname = os.path.join(f"conversions/123.mp3")
         engine.save_to_file(output, fname)
         time.sleep(1)
         engine.runAndWait()
