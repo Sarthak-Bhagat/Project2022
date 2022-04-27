@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 
 <head>
     <meta charset="utf-8">
@@ -7,8 +6,13 @@
     <title>Home - Brand</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/vanilla-zoom.min.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Login-Form-Dark.css') }}">
+    <!-- <link rel="stylesheet" href="/assets/css/Login-Form-Dark.css"> -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allan&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura&amp;display=swap">
@@ -20,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
 </head>
 
-<body>
+<body style="padding: 50px;height: 600px;text-align: center;background:#101213 ">
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-dark clean-navbar"
         style="box-shadow: 0px 0px var(--bs-red);background: var(--bs-yellow);">
         <div class="container"><a class="navbar-brand logo" href="#" style="color: var(--bs-light);">Aural
@@ -32,9 +36,8 @@
                             style="color: var(--bs-light);">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/features.html"
                             style="color: var(--bs-light);">Convert</a></li>
-                    <li class="nav-item dropdown" style="color: var(--bs-body-bg);"><a class="dropdown-toggle nav-link"
-                            aria-expanded="false" data-bs-toggle="dropdown" href="#"
-                            style="color: var(--bs-body-bg);font-size: 12.8px;">INDUSTRIES</a>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false"
+                            data-bs-toggle="dropdown" href="#" style="color: var(--bs-light);">industries</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="#">ACCESSIBILITY</a>
                             <a class="dropdown-item" href="#">AUTOMOTIVE</a>
                             <a class="dropdown-item" href="#">ENTERTAINMENT</a>
@@ -42,7 +45,8 @@
                             <a class="dropdown-item" href="#">GOVERNMENT</a><a class="dropdown-item"
                                 href="#">HEALTHCARE</a>
                             <a class="dropdown-item" href="#">PA & BROADCAST SYSTEM</a>
-                            <a class="dropdown-item" href="#">PUBLISHING</a>
+                            <a class="dropdown-item" href="#">PUBLISHING</a><a class="dropdown-item" href="#">Second
+                                Item</a><a class="dropdown-item" href="#">Third Item</a>
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="/about-us.html" style="color: var(--bs-light);">About
@@ -53,14 +57,30 @@
             </div>
         </div>
     </nav>
-    <main class="text-dark page landing-page">
-        <section class="clean-block about-us">
-            <h1 style="margin: 10px 0px 8px;padding: 10px;">&nbsp; &nbsp;Plain text to Speech</h1><input
-                class="form-control-plaintext" type="text" value="{{ output }}"
-                style="padding: 10px;margin: 30px;"><button class="btn btn-primary" type="button"
-                style="margin: 33px;color: var(--bs-white);background: var(--bs-gray-500);">Convert</button>
+    <main class="text-center text-dark page landing-page">
+        <section class="login-dark" bs-dragged="1">
+            <form method="post">
+                <h1 style="font-family: ABeeZee, sans-serif;">Register</h1>
+                <div class="illustration"><input class="form-control" type="text" name="username"
+                        placeholder="Username" /></div>
+                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email" /></div>
+                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password" />
+                </div>
+                <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Register</button></div>
+            </form>
+            <form method="post">
+                <h2 class="visually-hidden">Login Form</h2>
+                <h1 style="font-family: ABeeZee, sans-serif;">Register</h1>
+                <div class="illustration"><input class="form-control" type="text" name="username"
+                        placeholder="Username" /></div>
+                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email" /></div>
+                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password" />
+                </div>
+                <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Register</button></div>
+            </form>
         </section>
-
+        <div></div>
+        <div></div>
     </main>
     <footer class="page-footer dark">
         <div class="container">

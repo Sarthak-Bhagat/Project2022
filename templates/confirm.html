@@ -1,14 +1,16 @@
 <!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Brand</title>
-
     <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/vanilla-zoom.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Login-Form-Dark.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <!-- <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="/assets/css/vanilla-zoom.min.css"> -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allan&amp;display=swap">
@@ -16,51 +18,52 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arizonia&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calligraffitti&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Charm&amp;display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
 </head>
 
-<body style="padding: 50px;height: 600px;text-align: center;background:#101213 ">
+<body>
 
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-dark clean-navbar"
-        style="box-shadow: 0px 0px var(--bs-red);background: var(--bs-yellow);">
-        <div class="container"><a class="navbar-brand logo" href="#" style="color: var(--bs-light);">Aural
-                Mate</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
-                    class="visually-hidden">Toggle
-                    navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="/" style="color: var(--bs-light);">Home</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="/convert" style="color: var(--bs-light);">Convert</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="/about-us" style="color: var(--bs-light);">About
-                            Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact-us" style="color: var(--bs-light);">Contact
-                            Us</a>
-                    </li>
-                </ul><button class="btn btn-primary" type="button" onclick="window.location.href = '/login';">Log
-                    In</button>
-            </div>
-        </div>
-    </nav>
-    <main class="text-center text-dark page landing-page">
-        <section class="login-dark">
-            <form method="post">
-                <h2 class="visually-hidden">Login Form</h2>
-                <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password">
+    <main class="text-dark page landing-page">
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-dark clean-navbar"
+            style="box-shadow: 0px 0px var(--bs-red);background: var(--bs-yellow);">
+            <div class="container"><a class="navbar-brand logo" href="/" style="color: var(--bs-light);">Aural
+                    Mate</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
+                        class="visually-hidden">Toggle navigation</span><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="/"
+                                style="color: var(--bs-light);">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/features"
+                                style="color: var(--bs-light);">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/convert"
+                                style="color: var(--bs-light);">Convert</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/about-us" style="color: var(--bs-light);">About
+                                Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact-us"
+                                style="color: var(--bs-light);">Contact
+                                Us</a></li>
+                    </ul><button class="btn btn-primary" type="button" onclick="window.location.href = '/login';">Log
+                        In</button>
                 </div>
-                <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Log In</button></div><a
-                    class="forgot" href="#">Forgot your email or password?</a>
-            </form>
+            </div>
+        </nav>
+        <section class="clean-block about-us">
+            <h1 style="margin: 10px 0px 8px;padding: 10px;">&nbsp; &nbsp;Plain text to Speech</h1>
+            <div>
+                <form method="POST">
+                    <textarea name="confirm" rows="15" cols="150">{{output}}</textarea>
+                    <br>
+                    <input type="submit" value="Convert">
+                </form>
+            </div>
         </section>
-        <div></div>
-        <div></div>
     </main>
+
     <footer class="page-footer dark">
         <div class="container">
             <div class="row">
@@ -99,8 +102,8 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="{{ url_for('static', filename='js/vanilla-zoom.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    <script src="/assets/js/vanilla-zoom.js"></script>
+    <script src="/assets/js/theme.js"></script>
 </body>
 
 </html>

@@ -20,25 +20,34 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-dark clean-navbar" style="box-shadow: 0px 0px var(--bs-red);background: var(--bs-yellow);">
-        <div class="container"><a class="navbar-brand logo" href="#" style="color: var(--bs-light);">Aural Mate</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <main class="page contact-us-page">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-dark clean-navbar"
+        style="box-shadow: 0px 0px var(--bs-red);background: var(--bs-yellow);">
+        <div class="container"><a class="navbar-brand logo" href="/" style="color: var(--bs-light);">Aural
+                Mate</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/index" style="color: var(--bs-light);">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/features" style="color: var(--bs-light);">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/convert" style="color: var(--bs-light);">Convert</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about-us" style="color: var(--bs-light);">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/contact-us" style="color: var(--bs-light);">Contact Us</a></li>
-                </ul><button class="btn btn-primary" type="button">Log In / Sign up</button>
+                    <li class="nav-item"><a class="nav-link active" href="/" style="color: var(--bs-light);">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/features"
+                            style="color: var(--bs-light);">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/convert" style="color: var(--bs-light);">Convert</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/about-us" style="color: var(--bs-light);">About
+                            Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact-us" style="color: var(--bs-light);">Contact
+                            Us</a></li>
+                </ul><button class="btn btn-primary" type="button" onclick="window.location.href = '/login';">Log
+                    In</button>
             </div>
         </div>
     </nav>
-    <main class="page contact-us-page">
+
         <section class="clean-block clean-form dark">
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Contact Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
                 </div>
                 <form>
                     <div class="mb-3"><label class="form-label" for="name">Name</label><input class="form-control" type="text" id="name" name="name"></div>
@@ -57,30 +66,27 @@
                     <h5>Get started</h5>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
+                        <li><a href="/login">Log In</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <h5>About us</h5>
                     <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
+                        <li><a href="/about-us">Company Information</a></li>
+                        <li><a href="/contact-us">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <h5>Support</h5>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
+                        <li><a href="/features">FAQ</a></li>
+                        <li><a href="/about-us">Help desk</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <h5>Legal</h5>
                     <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>

@@ -51,16 +51,16 @@ def ocr(f):
     return output
 
 
-def audioify(output):
+def speak(text, fname):
     print("Converting to audio")
     high_qual = False
     if high_qual == True:
-        tts = gTTS(text=output, lang="en")
-        tts.save("output.mp3")
+        tts = gTTS(text=text, lang="en")
+        tts.save(fname)
     else:
         engine.setProperty("voice", "english")
-        fname = os.path.join(f"conversions/123.mp3")
-        engine.save_to_file(output, fname)
+        fname = os.path.join(f"conversions/{fname}")
+        engine.save_to_file(text, fname)
         time.sleep(1)
         engine.runAndWait()
         while not os.path.exists(fname):
