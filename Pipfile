@@ -1,0 +1,43 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+certifi = "*"
+charset-normalizer = "*"
+click = "*"
+flask = "*"
+flask-login = "*"
+flask-sqlalchemy = "*"
+greenlet = "*"
+gtts = "*"
+gunicorn = "*"
+idna = "*"
+itsdangerous = "*"
+jinja2 = "*"
+lxml = "*"
+markupsafe = "*"
+numpy = "*"
+opencv-python-headless = "*"
+pdf2image = "*"
+pillow = "*"
+pytesseract = "*"
+python-docx = "*"
+pyttsx3 = "*"
+requests = "*"
+six = "*"
+sqlalchemy = "*"
+urllib3 = "*"
+werkzeug = "*"
+neovim = "*"
+autopep8 = "*"
+docx2txt = "*"
+pyspellchecker = "*"
+epub = "*"
+
+[dev-packages]
+autopep8 = "*"
+
+[requires]
+python_version = "3.10.*"
