@@ -48,6 +48,7 @@ with app.app_context():
     SQLAlchemy_Session = sessionmaker(bind=db.engine)
     sqla_session = SQLAlchemy_Session()
 
+
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
@@ -73,17 +74,19 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return f"<User {self.username}>"
 
+
 @app.before_first_request
 def create_table():
     db.create_all()
+
 
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+
 def allowed_file(filename):
     return "." in filename and Path(filename).suffix in ALLOWED_EXTENSIONS
-
 
 
 @app.route("/")
@@ -122,6 +125,7 @@ def login():
     else:
         return render_template('login.html')
 
+
 def confirm(output):
     return render_template("confirm.html", output=output)
 
@@ -136,13 +140,13 @@ def download(filename, high_qual):
     text = request.form["confirm"]
     print(f"high_qual = {high_qual}")
     text_to_speech(text, fname, high_qual)
-    file_size = os.path.getsize(os.path.join(app.config["AUDIO_FOLDER"], fname))
+    file_size = os.path.getsize(os.path.join(
+        app.config["AUDIO_FOLDER"], fname))
     if current_user.is_authenticated:
         current_user.file_size = file_size
         current_user.lines_converted = len(text.splitlines())
         current_user.documents_uploaded += 1
         db.session.commit()
-
 
     return send_file(
         os.path.join(app.config["AUDIO_FOLDER"], fname),

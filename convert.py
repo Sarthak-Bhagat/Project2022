@@ -13,7 +13,6 @@ from odf import teletype
 engine = pyttsx3.init()
 
 
-
 def ocr(f):
     # print(f.filename)
     filename = os.path.join("uploads", f.filename)
@@ -44,7 +43,7 @@ def ocr(f):
     elif ext == ".txt":
         with open(filename, "r") as file:
             output = file.read()
-    
+
     elif ext == ".odt":
         doc = load(filename)
         output = teletype.extractText(doc).strip()

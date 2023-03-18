@@ -1,118 +1,256 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/vanilla-zoom.min.css') }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+          />
+    <title>Home - Brand
+    </title>
+    <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"
+          />
+    <link
+          rel="stylesheet"
+          href="{{ url_for('static', filename='css/lib/bootstrap.min.css') }}"
+          />
+    <link
+          rel="stylesheet"
+          href="{{ url_for('static', filename='css/vanilla-zoom.min.css') }}"
+          />
     <!-- <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="/assets/css/vanilla-zoom.min.css"> -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allan&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arizonia&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calligraffitti&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Charm&amp;display=swap">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-</head>
-
-<body>
-
+    <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap"
+          />
+    <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap"
+          />
+    <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Aguafina+Script&amp;display=swap"
+          />
+    <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Allan&amp;display=swap"
+          />
+    <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Allura&amp;display=swap"
+          />
+    <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Arizonia&amp;display=swap"
+          />
+    <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Calligraffitti&amp;display=swap"
+          />
+    <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Charm&amp;display=swap"
+          />
+    <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
+          />
+    <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"
+          />
+  </head>
+  <body>
     <main class="text-dark page landing-page">
-        <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-dark clean-navbar"
-            style="box-shadow: 0px 0px var(--bs-red);background: var(--bs-yellow);">
-            <div class="container"><a class="navbar-brand logo" href="/" style="color: var(--bs-light);">Aural
-                    Mate</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
-                        class="visually-hidden">Toggle navigation</span><span
-                        class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="/"
-                                style="color: var(--bs-light);">Home</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="/features"
-                                style="color: var(--bs-light);">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/convert"
-                                style="color: var(--bs-light);">Convert</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="/about-us" style="color: var(--bs-light);">About
-                                Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/contact-us"
-                                style="color: var(--bs-light);">Contact
-                                Us</a></li>
-                    </ul><button class="btn btn-primary" type="button" onclick="window.location.href = '/login';">Log
-                        In</button>
-                </div>
-            </div>
-        </nav>
-        <section class="clean-block about-us">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <h1 style="margin: 10px 0px 8px;padding: 10px;">Confirm the Result of OCR</h1>
-            <div class='text-center'>
-                <form method="POST">
-                    <textarea class='form-control' name="confirm" rows="15" cols="150">{{output}}</textarea>
-                    <br/>
-                            <input class='form-check-input' type="checkbox" id="high_qual" name="high_qual" value=True>
-                            <label  class='form-check-label' for="high_qual">Use gTTs instead of pyTTSx3(much slower and less stable)</label>
-                            <br/>
-                    <input class='btn btn-primary btn-lg' type="submit" value="Convert">
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="page-footer dark">
+      <nav
+           class="navbar navbar-light navbar-expand-lg fixed-top bg-dark clean-navbar"
+           style="box-shadow: 0px 0px var(--bs-red); background: var(--bs-yellow)"
+           >
         <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <h5>Get started</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="/login">Log In</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>About us</h5>
-                    <ul>
-                        <li><a href="/about-us">Company Information</a></li>
-                        <li><a href="/contact-us">Contact us</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="/features">FAQ</a></li>
-                        <li><a href="/about-us">Help desk</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Legal</h5>
-                    <ul>
-                        <li><a href="">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
+          <a class="navbar-brand logo" href="/" style="color: var(--bs-light)"
+             >Aural Mate
+          </a
+            >
+          <button
+                  data-bs-toggle="collapse"
+                  class="navbar-toggler"
+                  data-bs-target="#navcol-1"
+                  >
+            <span class="visually-hidden">Toggle navigation
+            </span
+              >
+            <span class="navbar-toggler-icon">
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                   class="nav-link active"
+                   href="/"
+                   style="color: var(--bs-light)"
+                   >Home
+                </a
+                  >
+              </li>
+              <li class="nav-item">
+                <a
+                   class="nav-link"
+                   href="/features"
+                   style="color: var(--bs-light)"
+                   >Features
+                </a
+                  >
+              </li>
+              <li class="nav-item">
+                <a
+                   class="nav-link"
+                   href="/convert"
+                   style="color: var(--bs-light)"
+                   >Convert
+                </a
+                  >
+              </li>
+              <li class="nav-item">
+                <a
+                   class="nav-link"
+                   href="/about-us"
+                   style="color: var(--bs-light)"
+                   >About Us
+                </a
+                  >
+              </li>
+              <li class="nav-item">
+                <a
+                   class="nav-link"
+                   href="/contact-us"
+                   style="color: var(--bs-light)"
+                   >Contact Us
+                </a
+                  >
+              </li>
+            </ul>
+            <button
+                    class="btn btn-primary"
+                    type="button"
+                    onclick="window.location.href = '/login';"
+                    >
+              Log In
+            </button>
+          </div>
         </div>
-        <div class="footer-copyright">
-            <p>© 2021 Copyright Text</p>
+      </nav>
+      <section class="clean-block about-us">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h1 style="margin: 10px 0px 8px; padding: 10px">
+          Confirm the Result of OCR
+        </h1>
+        <div class="text-center">
+          <form method="POST">
+            <textarea class="form-control" name="confirm" rows="15" cols="150">
+              {{output}}
+            </textarea
+              >
+            <br />
+            <input
+                   class="form-check-input"
+                   type="checkbox"
+                   id="high_qual"
+                   name="high_qual"
+                   value="True"
+                   />
+            <label class="form-check-label" for="high_qual"
+                   >Use gTTs instead of pyTTSx3(much slower and less stable)
+            </label
+              >
+            <br />
+            <input
+                   class="btn btn-primary btn-lg"
+                   type="submit"
+                   value="Convert"
+                   />
+          </form>
         </div>
+      </section>
+    </main>
+    <footer class="page-footer dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h5>Get started
+            </h5>
+            <ul>
+              <li>
+                <a href="#">Home
+                </a>
+              </li>
+              <li>
+                <a href="/login">Log In
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h5>About us
+            </h5>
+            <ul>
+              <li>
+                <a href="/about-us">Company Information
+                </a>
+              </li>
+              <li>
+                <a href="/contact-us">Contact us
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h5>Support
+            </h5>
+            <ul>
+              <li>
+                <a href="/features">FAQ
+                </a>
+              </li>
+              <li>
+                <a href="/about-us">Help desk
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h5>Legal
+            </h5>
+            <ul>
+              <li>
+                <a href="">Terms of Service
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2021 Copyright Text
+        </p>
+      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="/assets/js/vanilla-zoom.js"></script>
-    <script src="/assets/js/theme.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js">
+    </script>
+    <script src="/assets/js/vanilla-zoom.js">
+    </script>
+    <script src="/assets/js/theme.js">
+    </script>
+  </body>
 </html>
